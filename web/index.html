@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Szachy</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="menu" class="screen active">
+  <div class="logo">
+    <div class="logo-pieces"><span class="pc w">&#x265E;&#xFE0E;</span><span class="pc b">&#x265B;&#xFE0E;</span><span class="pc w">&#x265C;&#xFE0E;</span></div>
+    <h1>Szachy</h1>
+    <p class="sub">na jednym lub dwóch telefonach</p>
+  </div>
+  <div class="menu-box">
+    <div class="names">
+      <input id="name1" maxlength="12" value="Gracz 1" aria-label="Twoje imię">
+      <input id="name2" maxlength="12" value="Gracz 2" aria-label="Imię drugiego gracza">
+    </div>
+    <button class="big" id="btn-pvp">👥 Dwóch graczy</button>
+    <button class="big" id="btn-cpu">🤖 Gra z komputerem</button>
+    <button class="big" id="btn-net">📡 Gra na dwóch telefonach</button>
+    <button class="ghost" id="btn-rules">Zasady gry</button>
+  </div>
+</div>
+
+<div id="game" class="screen">
+  <header>
+    <button class="icon" id="btn-quit" aria-label="Menu">✕</button>
+    <div class="status"><span id="status-main"></span><small id="status-sub"></small></div>
+    <button class="icon" id="btn-more" aria-label="Opcje">⋯</button>
+  </header>
+  <div class="mid">
+  <div class="player-bar" id="bar-top"></div>
+  <div class="board-wrap"><div id="board"></div></div>
+  <div class="player-bar" id="bar-bottom"></div>
+  <div class="moves" id="moves"></div>
+  </div>
+  <div class="actions" id="actions"></div>
+</div>
+
+<div id="modal" class="modal hidden">
+  <div class="card" id="modal-card"></div>
+</div>
+<div id="toast" class="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
